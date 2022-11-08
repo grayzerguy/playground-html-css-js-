@@ -1,7 +1,7 @@
-const panel = document.querySelectorAll(".panel");
-// console.log(typeof panel);
+const panels = document.querySelectorAll(".panel"); // get all the div whit class="panel"
 
-panel.forEach((panel) => {
+//loop over all the panel and add event Listener (click) remove class active from add div's and add to the one we click
+panels.forEach((panel) => {
   //   console.log(panel);
   panel.addEventListener("click", () => {
     // console.log("hello");
@@ -9,9 +9,9 @@ panel.forEach((panel) => {
     panel.classList.add("active");
   });
 });
-
+//function to remove the class (active) from all div's (we call thr function up before we add class active to the new)
 function removeActiveClasses() {
-  panel.forEach((panel) => {
+  panels.forEach((panel) => {
     panel.classList.remove("active");
   });
 }
